@@ -9,13 +9,15 @@
   </form>
 </div>
 <ul class="tasks">
+  <% tasks.forEach((task) =>{ %>
   <li>
     <button class="finished"></button>
     <div class="text">
-      <h4>programming</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <h4><%= task.title %></h4>
+      <p><%= task.description %></p>
     </div>
     <a class="delete" href="">delete</a>
     <a class="edite" href="">edite</a>
   </li>
+  <%})%>
 </ul>
