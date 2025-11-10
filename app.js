@@ -6,6 +6,8 @@ const connectDB = require('./server/config/db');
 
 // public
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Template engine setup
 app.use(expressLayouts);
