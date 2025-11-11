@@ -23,8 +23,9 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const id = await req.body.id;
+    const id = req.params.id;
     await Tasks.findByIdAndDelete({ id: _id });
+    res.redirect('/');
   } catch (err) {
     console.log(err);
   }
