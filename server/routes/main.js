@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const Tasks = require('../model/Todo');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    res.render('index', { title: 'Todo List' });
+    const tasks = await Tasks.find().sort({ created_at: -1 });
+    res.render('index', { title: 'Todo List', tasks });
   } catch (err) {
     console.log(err);
   }
