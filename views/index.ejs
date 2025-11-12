@@ -23,6 +23,9 @@
       <div class="text">
         <h4 class="title"><%= task.title %></h4>
         <p><%= task.description %></p>
+        <small style="font-size: 12px"
+          >Created: <%= task.createdAt.toDateString() %></small
+        >
       </div>
     </div>
     <div class="btn">
