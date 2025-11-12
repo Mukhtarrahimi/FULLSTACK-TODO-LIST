@@ -102,8 +102,13 @@ body {
   cursor: pointer;
   /* background-color: red; */
 }
-.complate {
-  background-color: rgb(145, 30, 253);
+.finished-btn.complete {
+  background-color: #4caf50; /* سبز */
+}
+
+.title.completed {
+  text-decoration: line-through;
+  color: grey;
 }
 
 .text h4 {

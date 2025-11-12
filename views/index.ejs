@@ -19,9 +19,11 @@
   <% tasks.forEach((task) =>{ %>
   <li>
     <div class="top">
-      <button class="finished-btn"></button>
+      <button class="finished-btn" data-id="<%= task._id %>"></button>
       <div class="text">
-        <h4 class="title"><%= task.title %></h4>
+        <h4 class="title <%= task.is_done ? 'completed' : '' %>">
+          <%= task.title %>
+        </h4>
         <p><%= task.description %></p>
         <small style="font-size: 12px"
           >Created: <%= task.createdAt.toDateString() %></small

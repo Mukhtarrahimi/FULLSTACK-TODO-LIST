@@ -57,4 +57,19 @@ router.put('/edit/:id', async (req, res) => {
   }
 });
 
+router.put('/:id/done', async (req, res) => {
+  try {
+    const task = await Tasks.findById(req.params.id);
+    if (!task) return res.status(404).send('Task not found');
+
+    task.is_done = !task.is_done;
+    await task.save();
+
+    res.status(200).send('Task updated');
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Server error');
+  }
+});
+
 module.exports = router;
