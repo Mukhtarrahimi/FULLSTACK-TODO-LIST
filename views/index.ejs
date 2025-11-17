@@ -18,13 +18,17 @@
 <ul class="tasks">
   <% tasks.forEach((task) =>{ %>
   <li>
-    <button class="finished"></button>
-    <div class="text">
-      <h4><%= task.title %></h4>
-      <p><%= task.description %></p>
+    <div class="top">
+      <button class="finished"></button>
+      <div class="text">
+        <h4><%= task.title %></h4>
+        <p><%= task.description %></p>
+      </div>
     </div>
-    <a class="delete" href="">delete</a>
-    <a class="edite" href="">edite</a>
+    <div class="btn">
+      <a class="delete" href="">delete</a>
+      <a class="edite" href="">edite</a>
+    </div>
   </li>
   <%})%>
 </ul>
