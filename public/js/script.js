@@ -1,6 +1,9 @@
-let btn = document.querySelector('.finished');
-let title = document.querySelector('.title');
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.finished-btn');
 
-btn.addEventListener('click', (e) => {
-  btn.toggle('complate');
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('complete');
+    });
+  });
 });
