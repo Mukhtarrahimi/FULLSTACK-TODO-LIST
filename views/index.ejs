@@ -30,7 +30,9 @@
         <button class="delete">delete</button>
       </form>
 
-      <a class="edite" href="">edite</a>
+      <form action="/<%= task._id %>?_method=PUT" method="POST">
+        <button class="edit">edit</button>
+      </form>
     </div>
   </li>
   <%})%>
