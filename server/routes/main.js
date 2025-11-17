@@ -11,4 +11,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.post('/', async (req, res) => {
+  try {
+    const { title, description } = req.body;
+    await Tasks.create({ title, description });
+    res.redirect('/');
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 module.exports = router;
