@@ -26,7 +26,10 @@
       </div>
     </div>
     <div class="btn">
-      <a class="delete" href="/:id">delete</a>
+      <form action="/<%= task._id %>?_method=DELETE" method="POST">
+        <button class="delete">delete</button>
+      </form>
+
       <a class="edite" href="">edite</a>
     </div>
   </li>
