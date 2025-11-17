@@ -94,12 +94,16 @@ body {
   gap: 10px;
   margin-top: 8px;
 }
-.tasks li .finished {
+.finished-btn {
   width: 18px;
   height: 18px;
   border: 1px;
   border-radius: 50%;
   cursor: pointer;
+  /* background-color: red; */
+}
+.complate {
+  background-color: red;
 }
 
 .text h4 {
