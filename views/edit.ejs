@@ -1,0 +1,11 @@
+<div class="header">
+  <h2>TODO LIST</h2>
+</div>
+<div class="add-task">
+  <h3>Edit Task</h3>
+  <form action="/<%= task._id %>?_method=PUT" method="POST">
+    <input type="text" name="title" value="<%= task.title %>" />
+    <input type="text" name="description" value="<%= task.description %>" />
+    <button>Save</button>
+  </form>
+</div>

@@ -31,4 +31,17 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+router.put('/edit/:id', async (req, res) => {
+  try {
+    const { title, description } = req.body;
+    await Tasks.findByIdAndUpdate(req.params.id, {
+      title,
+      description,
+    });
+    res.redirect('/');
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 module.exports = router;
