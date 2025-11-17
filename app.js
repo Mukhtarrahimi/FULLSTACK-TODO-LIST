@@ -3,6 +3,9 @@ const expressLayouts = require('express-ejs-layouts');
 const app = express();
 require('dotenv').config();
 const connectDB = require('./server/config/db');
+// overrid method
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 // public
 app.use(express.static('public'));
@@ -15,7 +18,6 @@ app.use(expressLayouts);
 app.set('layout', './layouts/main');
 
 app.set('view engine', 'ejs');
-
 app.use('/', require('./server/routes/main'));
 // server listen
 const PORT = process.env.PORT || 3000;
