@@ -26,10 +26,13 @@
       </div>
     </div>
     <div class="btn">
+      <!-- Delete -->
       <form action="/<%= task._id %>?_method=DELETE" method="POST">
-        <a class="delete">delete</a>
+        <button class="delete button">delete</button>
       </form>
-      <a class="edite" href="/edit/<%= task._id %>">edit</a>
+
+      <!-- Edit -->
+      <a class="edit button" href="/edit/<%= task._id %>">edit</a>
     </div>
   </li>
   <%})%>
