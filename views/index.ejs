@@ -27,12 +27,9 @@
     </div>
     <div class="btn">
       <form action="/<%= task._id %>?_method=DELETE" method="POST">
-        <button class="delete">delete</button>
+        <a class="delete">delete</a>
       </form>
-
-      <form action="/edite/<%= task._id %>" method="GET">
-        <button class="edite">edit</button>
-      </form>
+      <a class="edite" href="/edit/<%= task._id %>">edit</a>
     </div>
   </li>
   <%})%>
