@@ -11,6 +11,19 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const task = await Tasks.findById(req.params.id);
+    if (!task) {
+      return res.status(404).send('Task not found');
+    }
+    res.render('edit', { title: 'Edid Task', task });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Server Error');
+  }
+});
+
 router.post('/', async (req, res) => {
   try {
     const { title, description } = req.body;

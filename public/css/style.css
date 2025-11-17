@@ -120,7 +120,7 @@ body {
   display: flex;
   gap: 5px;
 }
-.tasks li .button {
+.button {
   border-radius: 5px;
   border: none;
   padding: 3px 8px;
@@ -136,9 +136,9 @@ body {
 .tasks li .delete:hover {
   background-color: rgb(210, 11, 11);
 }
-.tasks li .edite {
+.tasks li .edit {
   background-color: rgb(11, 157, 11);
 }
-.tasks li .edite:hover {
+.tasks li .edit:hover {
   background-color: rgb(7, 129, 7);
 }
